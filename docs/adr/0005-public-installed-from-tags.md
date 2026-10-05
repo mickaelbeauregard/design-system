@@ -28,5 +28,5 @@ A pushed `vX.Y.Z` tag is the release. There is no registry and no publish job.
 ## Consequences
 
 No credential anywhere. The lockfile pins a commit and npm fetches it over
-HTTPS. Anyone can read the code; with no licence file, nobody else may reuse
-it until one is chosen. The private 0.1.0 left on GitHub Packages is unused.
+HTTPS. The code is MIT: anyone may reuse it with the copyright notice, which
+also lets whoever inherits a site built on it keep maintaining that site.

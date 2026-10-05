@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "A brand-neutral design system: W3C tokens, layered CSS components, and the checks that keep a project on them.",
   "type": "module",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mickaelbeauregard/design-system.git"
