@@ -1,0 +1,562 @@
+{
+  "$description": "The structure every project shares: type ramp, spacing, radius, elevation, motion, layers. No colour and no typeface — those are the brand's (templates/brand.tokens.json).",
+  "text": {
+    "$type": "dimension",
+    "xs": {
+      "$value": {
+        "value": 0.75,
+        "unit": "rem"
+      },
+      "$description": "Fine print, legal lines. Never body copy.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.5
+        }
+      }
+    },
+    "sm": {
+      "$value": {
+        "value": 0.875,
+        "unit": "rem"
+      },
+      "$description": "Captions, hints, metadata, badges.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.5
+        }
+      }
+    },
+    "md": {
+      "$value": {
+        "value": 1,
+        "unit": "rem"
+      },
+      "$description": "Controls: buttons, fields, navigation.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.5
+        }
+      }
+    },
+    "lg": {
+      "$value": {
+        "value": 1.0625,
+        "unit": "rem"
+      },
+      "$description": "Body copy.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.6,
+          "fluid": {
+            "max": {
+              "value": 1.125,
+              "unit": "rem"
+            }
+          }
+        }
+      }
+    },
+    "xl": {
+      "$value": {
+        "value": 1.125,
+        "unit": "rem"
+      },
+      "$description": "Lead copy: the sentence that sums a section up.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.5,
+          "fluid": {
+            "max": {
+              "value": 1.25,
+              "unit": "rem"
+            }
+          }
+        }
+      }
+    },
+    "2xl": {
+      "$value": {
+        "value": 1.25,
+        "unit": "rem"
+      },
+      "$description": "The smallest heading.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.35,
+          "fluid": {
+            "max": {
+              "value": 1.5,
+              "unit": "rem"
+            }
+          }
+        }
+      }
+    },
+    "3xl": {
+      "$value": {
+        "value": 1.5,
+        "unit": "rem"
+      },
+      "$description": "Section subheadings.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.25,
+          "fluid": {
+            "max": {
+              "value": 1.875,
+              "unit": "rem"
+            }
+          }
+        }
+      }
+    },
+    "4xl": {
+      "$value": {
+        "value": 1.875,
+        "unit": "rem"
+      },
+      "$description": "Section headings.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.2,
+          "fluid": {
+            "max": {
+              "value": 2.5,
+              "unit": "rem"
+            }
+          }
+        }
+      }
+    },
+    "5xl": {
+      "$value": {
+        "value": 2.25,
+        "unit": "rem"
+      },
+      "$description": "The page title.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.1,
+          "fluid": {
+            "max": {
+              "value": 3.5,
+              "unit": "rem"
+            }
+          }
+        }
+      }
+    },
+    "6xl": {
+      "$value": {
+        "value": 2.75,
+        "unit": "rem"
+      },
+      "$description": "A hero line or a headline figure. One per page.",
+      "$extensions": {
+        "io.github.mickaelbeauregard.ds": {
+          "lineHeight": 1.05,
+          "fluid": {
+            "max": {
+              "value": 4.5,
+              "unit": "rem"
+            }
+          }
+        }
+      }
+    },
+    "display": {
+      "$value": "{text.6xl}",
+      "$description": "Hero headline. Re-alias to move the whole role."
+    },
+    "h1": {
+      "$value": "{text.5xl}",
+      "$description": "<h1>."
+    },
+    "h2": {
+      "$value": "{text.4xl}",
+      "$description": "<h2>."
+    },
+    "h3": {
+      "$value": "{text.3xl}",
+      "$description": "<h3>."
+    },
+    "h4": {
+      "$value": "{text.2xl}",
+      "$description": "<h4> and below."
+    },
+    "body": {
+      "$value": "{text.lg}",
+      "$description": "Running text."
+    },
+    "ui": {
+      "$value": "{text.md}",
+      "$description": "Buttons, fields, navigation."
+    },
+    "small": {
+      "$value": "{text.sm}",
+      "$description": "Secondary lines."
+    }
+  },
+  "font-weight": {
+    "$type": "fontWeight",
+    "regular": {
+      "$value": 400,
+      "$description": "Body copy."
+    },
+    "medium": {
+      "$value": 500,
+      "$description": "Labels."
+    },
+    "semibold": {
+      "$value": 600,
+      "$description": "Controls and links."
+    },
+    "bold": {
+      "$value": 700,
+      "$description": "Headings."
+    }
+  },
+  "spacing": {
+    "$type": "dimension",
+    "2xs": {
+      "$value": {
+        "value": 0.25,
+        "unit": "rem"
+      },
+      "$description": "Icon to label."
+    },
+    "xs": {
+      "$value": {
+        "value": 0.5,
+        "unit": "rem"
+      },
+      "$description": "Inside a control; between a label and its field."
+    },
+    "sm": {
+      "$value": {
+        "value": 0.75,
+        "unit": "rem"
+      },
+      "$description": "Between related lines."
+    },
+    "md": {
+      "$value": {
+        "value": 1,
+        "unit": "rem"
+      },
+      "$description": "Page gutter on a phone; between paragraphs."
+    },
+    "lg": {
+      "$value": {
+        "value": 1.5,
+        "unit": "rem"
+      },
+      "$description": "Card padding."
+    },
+    "xl": {
+      "$value": {
+        "value": 2,
+        "unit": "rem"
+      },
+      "$description": "Between groups inside a section."
+    },
+    "2xl": {
+      "$value": {
+        "value": 3,
+        "unit": "rem"
+      },
+      "$description": "Between a section heading and its content on wide screens."
+    },
+    "3xl": {
+      "$value": {
+        "value": 4,
+        "unit": "rem"
+      },
+      "$description": "Section padding. Never less: generous spacing is the design."
+    },
+    "4xl": {
+      "$value": {
+        "value": 6,
+        "unit": "rem"
+      },
+      "$description": "Section padding on wide screens."
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "xs": {
+      "$value": {
+        "value": 4,
+        "unit": "px"
+      },
+      "$description": "Tags, code."
+    },
+    "sm": {
+      "$value": {
+        "value": 8,
+        "unit": "px"
+      },
+      "$description": "Fields, small controls, an image inside a card."
+    },
+    "md": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      },
+      "$description": "Alerts, menus."
+    },
+    "lg": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      },
+      "$description": "Cards and dialogs."
+    },
+    "xl": {
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      },
+      "$description": "Feature panels."
+    },
+    "full": {
+      "$value": {
+        "value": 9999,
+        "unit": "px"
+      },
+      "$description": "Pills, buttons, avatars."
+    }
+  },
+  "shadow": {
+    "$type": "shadow",
+    "sm": {
+      "$value": [
+        {
+          "color": "{color.shadow}",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 1,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 2,
+            "unit": "px"
+          },
+          "spread": {
+            "value": 0,
+            "unit": "px"
+          }
+        },
+        {
+          "color": "{color.shadow}",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 2,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 6,
+            "unit": "px"
+          },
+          "spread": {
+            "value": -1,
+            "unit": "px"
+          }
+        }
+      ],
+      "$description": "Cards and buttons at rest. The default."
+    },
+    "md": {
+      "$value": [
+        {
+          "color": "{color.shadow}",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 4,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 8,
+            "unit": "px"
+          },
+          "spread": {
+            "value": -2,
+            "unit": "px"
+          }
+        },
+        {
+          "color": "{color.shadow-strong}",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 10,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 16,
+            "unit": "px"
+          },
+          "spread": {
+            "value": -4,
+            "unit": "px"
+          }
+        }
+      ],
+      "$description": "A button under the pointer; menus."
+    },
+    "lg": {
+      "$value": [
+        {
+          "color": "{color.shadow}",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 8,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 12,
+            "unit": "px"
+          },
+          "spread": {
+            "value": -4,
+            "unit": "px"
+          }
+        },
+        {
+          "color": "{color.shadow-strong}",
+          "offsetX": {
+            "value": 0,
+            "unit": "px"
+          },
+          "offsetY": {
+            "value": 20,
+            "unit": "px"
+          },
+          "blur": {
+            "value": 32,
+            "unit": "px"
+          },
+          "spread": {
+            "value": -8,
+            "unit": "px"
+          }
+        }
+      ],
+      "$description": "A card under the pointer, and dialogs. The top of the scale."
+    }
+  },
+  "duration": {
+    "$type": "duration",
+    "fast": {
+      "$value": {
+        "value": 150,
+        "unit": "ms"
+      },
+      "$description": "Colour and border changes on hover."
+    },
+    "base": {
+      "$value": {
+        "value": 250,
+        "unit": "ms"
+      },
+      "$description": "Lifts, opening a disclosure."
+    },
+    "slow": {
+      "$value": {
+        "value": 400,
+        "unit": "ms"
+      },
+      "$description": "A dialog or a reveal entering."
+    }
+  },
+  "ease": {
+    "$type": "cubicBezier",
+    "standard": {
+      "$value": [
+        0.2,
+        0,
+        0,
+        1
+      ],
+      "$description": "Most movement: quick start, gentle stop."
+    },
+    "exit": {
+      "$value": [
+        0.3,
+        0,
+        1,
+        1
+      ],
+      "$description": "Something leaving the screen."
+    }
+  },
+  "motion": {
+    "$type": "number",
+    "$value": 1,
+    "$description": "Every lift and slide multiplies this. Reduced motion sets it to 0 on :root, where nothing outranks it."
+  },
+  "z": {
+    "$type": "number",
+    "sticky": {
+      "$value": 100,
+      "$description": "A sticky header or bar."
+    },
+    "overlay": {
+      "$value": 200,
+      "$description": "Menus and popovers."
+    },
+    "toast": {
+      "$value": 300,
+      "$description": "Notifications above everything."
+    }
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "md": {
+      "$value": {
+        "value": 48,
+        "unit": "rem"
+      },
+      "$description": "Tablet and up (768px). Media queries cannot read a variable: write @media (min-width: 48rem)."
+    },
+    "lg": {
+      "$value": {
+        "value": 64,
+        "unit": "rem"
+      },
+      "$description": "Desktop (1024px). Prefer a container query for a component."
+    }
+  },
+  "measure": {
+    "$type": "dimension",
+    "$value": {
+      "value": 42,
+      "unit": "rem"
+    },
+    "$description": "The longest a line of body copy gets: about 70 characters."
+  },
+  "container": {
+    "$type": "dimension",
+    "page": {
+      "$value": {
+        "value": 72,
+        "unit": "rem"
+      },
+      "$description": "The widest the page content gets."
+    }
+  }
+}

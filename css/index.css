@@ -1,0 +1,17 @@
+/*
+ * Everything, for a project without Tailwind. Import the generated tokens
+ * first, then this:
+ *
+ *   @import "../design/tokens.css";
+ *   @import "@mickaelbeauregard/design-system/css";
+ *
+ * Layers decide what wins, not file order or specificity: theme < base <
+ * components < utilities, and the project's own unlayered CSS beats them all.
+ */
+@layer theme, base, components, utilities;
+
+@import "./reset.css";
+@import "./base.css";
+@import "./layout.css";
+@import "./components.css";
+@import "./utilities.css";

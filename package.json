@@ -1,0 +1,54 @@
+{
+  "name": "@mickaelbeauregard/design-system",
+  "version": "0.1.0",
+  "description": "A brand-neutral design system: W3C tokens, layered CSS components, and the checks that keep a project on them.",
+  "type": "module",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickaelbeauregard/design-system.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "ds": "./bin/ds.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./css": {
+      "style": "./css/index.css",
+      "default": "./css/index.css"
+    },
+    "./css/*": {
+      "style": "./css/*",
+      "default": "./css/*"
+    },
+    "./tokens/*": "./tokens/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "bin",
+    "src",
+    "css",
+    "tokens",
+    "templates",
+    "catalogue",
+    "docs",
+    "DESIGN.md"
+  ],
+  "scripts": {
+    "build": "node bin/ds.mjs build",
+    "check": "node bin/ds.mjs check",
+    "catalogue": "node bin/ds.mjs catalogue",
+    "test": "node --test \"test/*.test.mjs\"",
+    "test:visual": "playwright test",
+    "lint": "node bin/ds.mjs check && node --test \"test/*.test.mjs\""
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

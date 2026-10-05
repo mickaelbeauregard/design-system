@@ -1,0 +1,117 @@
+/*
+ * Button. A button is a decision the page is asking for; anything else — a way
+ * back, more of the same, a fallback — is a link (link.css). Two buttons side by
+ * side then always mean two real choices.
+ *
+ * <button class="ds-button">            primary (default)
+ *   data-variant  accent | secondary | tonal | ghost
+ *   data-size     sm
+ *   data-width    full
+ *   aria-disabled="true" keeps it focusable and announced; use it over
+ *   `disabled` when the reason it is unavailable is written next to it.
+ *
+ * Every state only re-points the --button-* variables; the declarations that
+ * paint are written once.
+ */
+@layer components {
+  .ds-button {
+    --button-bg: var(--color-action);
+    --button-bg-hover: var(--color-action-hover);
+    --button-fg: var(--color-on-action);
+    --button-border: transparent;
+    --button-shadow: var(--shadow-sm);
+    --button-shadow-hover: var(--shadow-md);
+    --button-lift: -2px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    min-block-size: 2.75rem;
+    padding-block: var(--spacing-xs);
+    padding-inline: var(--spacing-lg);
+    border: 1px solid var(--button-border);
+    border-radius: var(--radius-full);
+    background: var(--button-bg);
+    color: var(--button-fg);
+    box-shadow: var(--button-shadow);
+    font-family: var(--font-body);
+    font-size: var(--text-ui);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background-color var(--duration-fast) var(--ease-standard),
+      border-color var(--duration-fast) var(--ease-standard),
+      box-shadow var(--duration-base) var(--ease-standard),
+      transform var(--duration-base) var(--ease-standard);
+  }
+
+  .ds-button:hover {
+    background: var(--button-bg-hover);
+    box-shadow: var(--button-shadow-hover);
+    transform: translateY(calc(var(--button-lift) * var(--motion)));
+  }
+
+  .ds-button:active {
+    box-shadow: var(--button-shadow);
+    transform: none;
+  }
+
+  .ds-button[data-variant="accent"] {
+    --button-bg: var(--color-accent);
+    --button-bg-hover: var(--color-accent-hover);
+    --button-fg: var(--color-on-accent);
+  }
+
+  .ds-button[data-variant="secondary"] {
+    --button-bg: transparent;
+    --button-bg-hover: color-mix(in srgb, currentColor 8%, transparent);
+    --button-fg: var(--ground-text);
+    --button-border: var(--ground-border-strong);
+    --button-shadow: none;
+    --button-shadow-hover: none;
+  }
+
+  .ds-button[data-variant="tonal"] {
+    --button-bg: var(--color-surface-muted);
+    --button-bg-hover: var(--color-border);
+    --button-fg: var(--color-text);
+    --button-shadow: none;
+    --button-shadow-hover: none;
+  }
+
+  .ds-button[data-variant="ghost"] {
+    --button-bg: transparent;
+    --button-bg-hover: color-mix(in srgb, currentColor 8%, transparent);
+    --button-fg: var(--ground-link);
+    --button-shadow: none;
+    --button-shadow-hover: none;
+    --button-lift: 0px;
+  }
+
+  .ds-button[data-size="sm"] {
+    min-block-size: 2.25rem;
+    padding-inline: var(--spacing-md);
+    font-size: var(--text-small);
+  }
+
+  .ds-button[data-width="full"] {
+    inline-size: 100%;
+  }
+
+  /* Disabled is a state of every variant, so it comes last and wins on order. */
+  .ds-button:is(:disabled, [aria-disabled="true"]) {
+    --button-bg: var(--color-disabled-surface);
+    --button-bg-hover: var(--color-disabled-surface);
+    --button-fg: var(--color-disabled-text);
+    --button-border: transparent;
+    --button-shadow: none;
+    --button-shadow-hover: none;
+    --button-lift: 0px;
+
+    cursor: not-allowed;
+  }
+}

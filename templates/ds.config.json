@@ -1,0 +1,17 @@
+{
+  "name": "My project",
+  "tokens": ["design/brand.tokens.json"],
+  "themes": {},
+  "out": {
+    "css": "design/tokens.css",
+    "claudeDesign": null,
+    "catalogue": "design/catalogue.html"
+  },
+  "check": {
+    "css": ["**/*.css"],
+    "markup": [],
+    "ignore": [],
+    "off": {},
+    "pairs": []
+  }
+}

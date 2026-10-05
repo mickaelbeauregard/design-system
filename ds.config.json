@@ -1,0 +1,17 @@
+{
+  "name": "Design system (default brand)",
+  "tokens": ["templates/brand.tokens.json"],
+  "themes": { "dark": ["templates/brand.dark.tokens.json"] },
+  "out": {
+    "css": "catalogue/tokens.css",
+    "tailwind": "catalogue/tokens.tailwind.css",
+    "claudeDesign": "catalogue/claude-design.tokens.json",
+    "catalogue": "catalogue/index.html"
+  },
+  "check": {
+    "css": ["css/**/*.css", "catalogue/*.css"],
+    "ignore": [],
+    "off": {},
+    "pairs": []
+  }
+}

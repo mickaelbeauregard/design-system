@@ -1,0 +1,113 @@
+/* The catalogue page's own layout. Held to the same rules as the system. */
+@layer components {
+  .cat-eyebrow {
+    color: var(--ground-text-muted);
+    font-size: var(--text-small);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .cat-roles {
+    --grid-min: 17rem;
+  }
+
+  .cat-role {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+    font-size: var(--text-small);
+  }
+
+  .cat-chip {
+    flex: none;
+    inline-size: 3rem;
+    block-size: 3rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .cat-pairs {
+    --grid-min: 15rem;
+  }
+
+  .cat-pair {
+    display: flex;
+    gap: var(--spacing-sm);
+    align-items: center;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-small);
+  }
+
+  .cat-pair-sample {
+    font-size: var(--text-h3);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .cat-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(3.5rem, 1fr));
+    gap: var(--spacing-xs);
+  }
+
+  .cat-step {
+    display: block;
+    block-size: 3rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+  }
+
+  .cat-type {
+    display: grid;
+    gap: var(--spacing-xs);
+    padding-block-end: var(--spacing-md);
+    border-block-end: 1px solid var(--color-border);
+  }
+
+  .cat-space {
+    display: grid;
+    grid-template-columns: 9rem auto 1fr;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  .cat-bar {
+    display: block;
+    block-size: 0.75rem;
+    border-radius: var(--radius-xs);
+    background: var(--color-action);
+  }
+
+  .cat-shape {
+    display: grid;
+    justify-items: center;
+    gap: var(--spacing-xs);
+    font-size: var(--text-small);
+  }
+
+  .cat-box {
+    display: block;
+    inline-size: 5rem;
+    block-size: 5rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+
+  .cat-states {
+    display: grid;
+    gap: var(--spacing-md);
+  }
+
+  .cat-narrow {
+    max-inline-size: 22rem;
+  }
+
+  @media (min-width: 48rem) {
+    .cat-type {
+      grid-template-columns: 14rem 1fr;
+      align-items: baseline;
+    }
+  }
+}

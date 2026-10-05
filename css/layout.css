@@ -1,0 +1,101 @@
+/*
+ * Layout primitives and grounds. Phone first: every base value is the phone's,
+ * and a min-width query adds the wide one (DS-0103).
+ */
+@layer components {
+  .ds-container {
+    inline-size: 100%;
+    max-inline-size: var(--container-page);
+    margin-inline: auto;
+    padding-inline: var(--spacing-md);
+  }
+
+  .ds-section {
+    padding-block: var(--spacing-3xl);
+  }
+
+  @media (min-width: 48rem) {
+    .ds-container {
+      padding-inline: var(--spacing-xl);
+    }
+
+    .ds-section {
+      padding-block: var(--spacing-4xl);
+    }
+  }
+
+  /* Grounds. Two sections in a row should not share one: they read as a
+     single tall band and the page loses its rhythm. */
+  [data-ground="muted"] {
+    background: var(--color-surface-muted);
+  }
+
+  [data-ground="inverse"] {
+    --ground-text: var(--color-text-on-inverse);
+    --ground-text-muted: var(--color-text-on-inverse-muted);
+    --ground-link: var(--color-text-on-inverse);
+    --ground-focus: var(--color-text-on-inverse);
+    --ground-border-strong: var(--color-text-on-inverse-muted);
+
+    background: var(--color-surface-inverse);
+    color: var(--ground-text);
+  }
+
+  .ds-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .ds-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+
+  /* As many columns as fit at --grid-min, then one: no breakpoint needed. */
+  .ds-grid {
+    --grid-min: 16rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--grid-min), 100%), 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  :is(.ds-stack, .ds-cluster, .ds-grid)[data-gap="xs"] {
+    gap: var(--spacing-xs);
+  }
+
+  :is(.ds-stack, .ds-cluster, .ds-grid)[data-gap="sm"] {
+    gap: var(--spacing-sm);
+  }
+
+  :is(.ds-stack, .ds-cluster, .ds-grid)[data-gap="lg"] {
+    gap: var(--spacing-lg);
+  }
+
+  :is(.ds-stack, .ds-cluster, .ds-grid)[data-gap="xl"] {
+    gap: var(--spacing-xl);
+  }
+
+  :is(.ds-stack, .ds-cluster, .ds-grid)[data-gap="2xl"] {
+    gap: var(--spacing-2xl);
+  }
+
+  .ds-prose {
+    max-inline-size: var(--measure);
+  }
+
+  .ds-prose > * + * {
+    margin-block-start: var(--spacing-md);
+  }
+
+  .ds-prose > * + :is(h2, h3, h4) {
+    margin-block-start: var(--spacing-xl);
+  }
+
+  .ds-muted {
+    color: var(--ground-text-muted);
+  }
+}

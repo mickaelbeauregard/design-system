@@ -1,0 +1,40 @@
+/*
+ * Link, for every underlined control: <a>, <button> and <summary> alike. The
+ * bare element style lives in base.css; .ds-link adds the weight and the
+ * variants, and works on a <button> too.
+ *
+ *   data-variant  standalone — on its own line, 44px tall at every width
+ *                 quiet      — secondary to its page, muted until hovered
+ */
+@layer components {
+  .ds-link {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--ground-link);
+    font-weight: var(--font-weight-semibold);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    cursor: pointer;
+  }
+
+  .ds-link:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  .ds-link[data-variant="standalone"] {
+    display: inline-flex;
+    align-items: center;
+    min-block-size: 2.75rem;
+  }
+
+  .ds-link[data-variant="quiet"] {
+    color: var(--ground-text-muted);
+    font-weight: var(--font-weight-regular);
+  }
+
+  .ds-link[data-variant="quiet"]:hover {
+    color: var(--ground-text);
+  }
+}

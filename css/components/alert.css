@@ -1,0 +1,36 @@
+/*
+ * Alert: a message about the page or a form, not a toast.
+ *
+ * <div class="ds-alert" data-status="danger" role="alert">
+ *   <p class="ds-alert-title">Le paiement n'est pas passé</p>
+ *   <p>La carte a été refusée. Aucun montant n'a été prélevé.</p>
+ * </div>
+ *
+ * role="alert" only for something that just happened and needs hearing now;
+ * role="status" for news that can wait; neither for a message present on load.
+ */
+@layer components {
+  :where(.ds-alert) {
+    --status-bg: var(--color-info-surface);
+    --status-fg: var(--color-info-text);
+    --status-border: var(--color-info-border);
+  }
+
+  .ds-alert {
+    --ground-link: var(--status-fg);
+    --ground-focus: var(--status-fg);
+
+    display: grid;
+    gap: var(--spacing-2xs);
+    padding: var(--spacing-md);
+    border: 1px solid var(--status-border);
+    border-radius: var(--radius-md);
+    background: var(--status-bg);
+    color: var(--status-fg);
+    font-size: var(--text-ui);
+  }
+
+  .ds-alert-title {
+    font-weight: var(--font-weight-semibold);
+  }
+}

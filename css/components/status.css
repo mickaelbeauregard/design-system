@@ -1,0 +1,29 @@
+/*
+ * The four statuses, as variables any component can read: tag, badge and
+ * alert do. One place, so a fifth status is one block here.
+ */
+@layer components {
+  [data-status="success"] {
+    --status-bg: var(--color-success-surface);
+    --status-fg: var(--color-success-text);
+    --status-border: var(--color-success-border);
+  }
+
+  [data-status="warning"] {
+    --status-bg: var(--color-warning-surface);
+    --status-fg: var(--color-warning-text);
+    --status-border: var(--color-warning-border);
+  }
+
+  [data-status="danger"] {
+    --status-bg: var(--color-danger-surface);
+    --status-fg: var(--color-danger-text);
+    --status-border: var(--color-danger-border);
+  }
+
+  [data-status="info"] {
+    --status-bg: var(--color-info-surface);
+    --status-fg: var(--color-info-text);
+    --status-border: var(--color-info-border);
+  }
+}

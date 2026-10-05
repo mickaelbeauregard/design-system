@@ -1,0 +1,1189 @@
+{
+  "name": "Design system (default brand)",
+  "version": 1,
+  "meta": {
+    "source": "@mickaelbeauregard/design-system (io.github.mickaelbeauregard.ds)"
+  },
+  "color": {
+    "themes": [
+      {
+        "id": "light",
+        "name": "Light"
+      },
+      {
+        "id": "dark",
+        "name": "Dark"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "color-neutral",
+        "value": {
+          "light": "#78716c",
+          "dark": "#78716c"
+        },
+        "usage": "Seed of the neutral scale: greys with a little warmth."
+      },
+      {
+        "name": "color-neutral-50",
+        "value": {
+          "light": "#f7f6f6",
+          "dark": "#f7f6f6"
+        },
+        "usage": "Step 50 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-100",
+        "value": {
+          "light": "#eeeceb",
+          "dark": "#eeeceb"
+        },
+        "usage": "Step 100 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-200",
+        "value": {
+          "light": "#dddad8",
+          "dark": "#dddad8"
+        },
+        "usage": "Step 200 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-300",
+        "value": {
+          "light": "#c5c0bc",
+          "dark": "#c5c0bc"
+        },
+        "usage": "Step 300 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-400",
+        "value": {
+          "light": "#a39d98",
+          "dark": "#a39d98"
+        },
+        "usage": "Step 400 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-500",
+        "value": {
+          "light": "#867f7a",
+          "dark": "#867f7a"
+        },
+        "usage": "Step 500 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-600",
+        "value": {
+          "light": "#69625d",
+          "dark": "#69625d"
+        },
+        "usage": "Step 600 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-700",
+        "value": {
+          "light": "#544e4a",
+          "dark": "#544e4a"
+        },
+        "usage": "Step 700 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-800",
+        "value": {
+          "light": "#413c39",
+          "dark": "#413c39"
+        },
+        "usage": "Step 800 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-900",
+        "value": {
+          "light": "#2c2825",
+          "dark": "#2c2825"
+        },
+        "usage": "Step 900 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-neutral-950",
+        "value": {
+          "light": "#1a1816",
+          "dark": "#1a1816"
+        },
+        "usage": "Step 950 of the color-neutral scale, generated from the seed."
+      },
+      {
+        "name": "color-brand",
+        "value": {
+          "light": "#2b5f75",
+          "dark": "#2b5f75"
+        },
+        "usage": "Seed of the brand scale. Replace with the brand's main colour."
+      },
+      {
+        "name": "color-brand-50",
+        "value": {
+          "light": "#f2f8fb",
+          "dark": "#f2f8fb"
+        },
+        "usage": "Step 50 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-100",
+        "value": {
+          "light": "#e3eff5",
+          "dark": "#e3eff5"
+        },
+        "usage": "Step 100 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-200",
+        "value": {
+          "light": "#c9dfe9",
+          "dark": "#c9dfe9"
+        },
+        "usage": "Step 200 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-300",
+        "value": {
+          "light": "#a5c7d7",
+          "dark": "#a5c7d7"
+        },
+        "usage": "Step 300 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-400",
+        "value": {
+          "light": "#78a6bb",
+          "dark": "#78a6bb"
+        },
+        "usage": "Step 400 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-500",
+        "value": {
+          "light": "#54889f",
+          "dark": "#54889f"
+        },
+        "usage": "Step 500 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-600",
+        "value": {
+          "light": "#376b81",
+          "dark": "#376b81"
+        },
+        "usage": "Step 600 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-700",
+        "value": {
+          "light": "#27566a",
+          "dark": "#27566a"
+        },
+        "usage": "Step 700 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-800",
+        "value": {
+          "light": "#1c4252",
+          "dark": "#1c4252"
+        },
+        "usage": "Step 800 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-900",
+        "value": {
+          "light": "#102d39",
+          "dark": "#102d39"
+        },
+        "usage": "Step 900 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-brand-950",
+        "value": {
+          "light": "#061b24",
+          "dark": "#061b24"
+        },
+        "usage": "Step 950 of the color-brand scale, generated from the seed."
+      },
+      {
+        "name": "color-ember",
+        "value": {
+          "light": "#b4540a",
+          "dark": "#b4540a"
+        },
+        "usage": "Seed of the accent scale: a second emphasis, used sparingly."
+      },
+      {
+        "name": "color-ember-50",
+        "value": {
+          "light": "#fff4ef",
+          "dark": "#fff4ef"
+        },
+        "usage": "Step 50 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-100",
+        "value": {
+          "light": "#ffe7db",
+          "dark": "#ffe7db"
+        },
+        "usage": "Step 100 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-200",
+        "value": {
+          "light": "#fdd0b8",
+          "dark": "#fdd0b8"
+        },
+        "usage": "Step 200 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-300",
+        "value": {
+          "light": "#f4af89",
+          "dark": "#f4af89"
+        },
+        "usage": "Step 300 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-400",
+        "value": {
+          "light": "#dd8552",
+          "dark": "#dd8552"
+        },
+        "usage": "Step 400 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-500",
+        "value": {
+          "light": "#c36120",
+          "dark": "#c36120"
+        },
+        "usage": "Step 500 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-600",
+        "value": {
+          "light": "#9d4700",
+          "dark": "#9d4700"
+        },
+        "usage": "Step 600 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-700",
+        "value": {
+          "light": "#7f3800",
+          "dark": "#7f3800"
+        },
+        "usage": "Step 700 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-800",
+        "value": {
+          "light": "#632a00",
+          "dark": "#632a00"
+        },
+        "usage": "Step 800 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-900",
+        "value": {
+          "light": "#451b00",
+          "dark": "#451b00"
+        },
+        "usage": "Step 900 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-ember-950",
+        "value": {
+          "light": "#2c0f00",
+          "dark": "#2c0f00"
+        },
+        "usage": "Step 950 of the color-ember scale, generated from the seed."
+      },
+      {
+        "name": "color-green",
+        "value": {
+          "light": "#2f7d4f",
+          "dark": "#2f7d4f"
+        },
+        "usage": "Seed of the success scale."
+      },
+      {
+        "name": "color-green-50",
+        "value": {
+          "light": "#f1f9f3",
+          "dark": "#f1f9f3"
+        },
+        "usage": "Step 50 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-100",
+        "value": {
+          "light": "#e1f2e6",
+          "dark": "#e1f2e6"
+        },
+        "usage": "Step 100 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-200",
+        "value": {
+          "light": "#c5e4ce",
+          "dark": "#c5e4ce"
+        },
+        "usage": "Step 200 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-300",
+        "value": {
+          "light": "#9ecfad",
+          "dark": "#9ecfad"
+        },
+        "usage": "Step 300 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-400",
+        "value": {
+          "light": "#6eb084",
+          "dark": "#6eb084"
+        },
+        "usage": "Step 400 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-500",
+        "value": {
+          "light": "#469363",
+          "dark": "#469363"
+        },
+        "usage": "Step 500 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-600",
+        "value": {
+          "light": "#257447",
+          "dark": "#257447"
+        },
+        "usage": "Step 600 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-700",
+        "value": {
+          "light": "#155f37",
+          "dark": "#155f37"
+        },
+        "usage": "Step 700 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-800",
+        "value": {
+          "light": "#0c4929",
+          "dark": "#0c4929"
+        },
+        "usage": "Step 800 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-900",
+        "value": {
+          "light": "#043219",
+          "dark": "#043219"
+        },
+        "usage": "Step 900 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-green-950",
+        "value": {
+          "light": "#001f0d",
+          "dark": "#001f0d"
+        },
+        "usage": "Step 950 of the color-green scale, generated from the seed."
+      },
+      {
+        "name": "color-amber",
+        "value": {
+          "light": "#b7791f",
+          "dark": "#b7791f"
+        },
+        "usage": "Seed of the warning scale."
+      },
+      {
+        "name": "color-amber-50",
+        "value": {
+          "light": "#fef5ec",
+          "dark": "#fef5ec"
+        },
+        "usage": "Step 50 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-100",
+        "value": {
+          "light": "#f9eada",
+          "dark": "#f9eada"
+        },
+        "usage": "Step 100 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-200",
+        "value": {
+          "light": "#f2d6b6",
+          "dark": "#f2d6b6"
+        },
+        "usage": "Step 200 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-300",
+        "value": {
+          "light": "#e3b886",
+          "dark": "#e3b886"
+        },
+        "usage": "Step 300 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-400",
+        "value": {
+          "light": "#ca924c",
+          "dark": "#ca924c"
+        },
+        "usage": "Step 400 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-500",
+        "value": {
+          "light": "#ae7111",
+          "dark": "#ae7111"
+        },
+        "usage": "Step 500 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-600",
+        "value": {
+          "light": "#895600",
+          "dark": "#895600"
+        },
+        "usage": "Step 600 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-700",
+        "value": {
+          "light": "#6f4500",
+          "dark": "#6f4500"
+        },
+        "usage": "Step 700 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-800",
+        "value": {
+          "light": "#563500",
+          "dark": "#563500"
+        },
+        "usage": "Step 800 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-900",
+        "value": {
+          "light": "#3b2300",
+          "dark": "#3b2300"
+        },
+        "usage": "Step 900 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-amber-950",
+        "value": {
+          "light": "#251400",
+          "dark": "#251400"
+        },
+        "usage": "Step 950 of the color-amber scale, generated from the seed."
+      },
+      {
+        "name": "color-red",
+        "value": {
+          "light": "#c0392b",
+          "dark": "#c0392b"
+        },
+        "usage": "Seed of the danger scale."
+      },
+      {
+        "name": "color-red-50",
+        "value": {
+          "light": "#fff4f2",
+          "dark": "#fff4f2"
+        },
+        "usage": "Step 50 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-100",
+        "value": {
+          "light": "#ffe6e2",
+          "dark": "#ffe6e2"
+        },
+        "usage": "Step 100 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-200",
+        "value": {
+          "light": "#ffcdc5",
+          "dark": "#ffcdc5"
+        },
+        "usage": "Step 200 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-300",
+        "value": {
+          "light": "#ffa698",
+          "dark": "#ffa698"
+        },
+        "usage": "Step 300 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-400",
+        "value": {
+          "light": "#ee7564",
+          "dark": "#ee7564"
+        },
+        "usage": "Step 400 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-500",
+        "value": {
+          "light": "#d44c3c",
+          "dark": "#d44c3c"
+        },
+        "usage": "Step 500 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-600",
+        "value": {
+          "light": "#b1291d",
+          "dark": "#b1291d"
+        },
+        "usage": "Step 600 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-700",
+        "value": {
+          "light": "#94170e",
+          "dark": "#94170e"
+        },
+        "usage": "Step 700 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-800",
+        "value": {
+          "light": "#740e07",
+          "dark": "#740e07"
+        },
+        "usage": "Step 800 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-900",
+        "value": {
+          "light": "#520502",
+          "dark": "#520502"
+        },
+        "usage": "Step 900 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-red-950",
+        "value": {
+          "light": "#360100",
+          "dark": "#360100"
+        },
+        "usage": "Step 950 of the color-red scale, generated from the seed."
+      },
+      {
+        "name": "color-blue",
+        "value": {
+          "light": "#2563eb",
+          "dark": "#2563eb"
+        },
+        "usage": "Seed of the info scale."
+      },
+      {
+        "name": "color-blue-50",
+        "value": {
+          "light": "#f3f7ff",
+          "dark": "#f3f7ff"
+        },
+        "usage": "Step 50 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-100",
+        "value": {
+          "light": "#e4edff",
+          "dark": "#e4edff"
+        },
+        "usage": "Step 100 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-200",
+        "value": {
+          "light": "#c8dbff",
+          "dark": "#c8dbff"
+        },
+        "usage": "Step 200 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-300",
+        "value": {
+          "light": "#a0c1ff",
+          "dark": "#a0c1ff"
+        },
+        "usage": "Step 300 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-400",
+        "value": {
+          "light": "#699bff",
+          "dark": "#699bff"
+        },
+        "usage": "Step 400 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-500",
+        "value": {
+          "light": "#3575fe",
+          "dark": "#3575fe"
+        },
+        "usage": "Step 500 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-600",
+        "value": {
+          "light": "#1754db",
+          "dark": "#1754db"
+        },
+        "usage": "Step 600 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-700",
+        "value": {
+          "light": "#0940ba",
+          "dark": "#0940ba"
+        },
+        "usage": "Step 700 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-800",
+        "value": {
+          "light": "#043093",
+          "dark": "#043093"
+        },
+        "usage": "Step 800 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-900",
+        "value": {
+          "light": "#011f69",
+          "dark": "#011f69"
+        },
+        "usage": "Step 900 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-blue-950",
+        "value": {
+          "light": "#001047",
+          "dark": "#001047"
+        },
+        "usage": "Step 950 of the color-blue scale, generated from the seed."
+      },
+      {
+        "name": "color-white",
+        "value": {
+          "light": "#ffffff",
+          "dark": "#ffffff"
+        },
+        "usage": "Pure white, for the raised surface only."
+      },
+      {
+        "name": "color-bg",
+        "value": {
+          "light": "#f7f6f6",
+          "dark": "#1a1816"
+        },
+        "usage": "Page background."
+      },
+      {
+        "name": "color-surface",
+        "value": {
+          "light": "#ffffff",
+          "dark": "#2c2825"
+        },
+        "usage": "Cards, dialogs, fields."
+      },
+      {
+        "name": "color-surface-muted",
+        "value": {
+          "light": "#eeeceb",
+          "dark": "#413c39"
+        },
+        "usage": "Secondary fills: tonal buttons, tags, sunken panels."
+      },
+      {
+        "name": "color-surface-inverse",
+        "value": {
+          "light": "#2c2825",
+          "dark": "#eeeceb"
+        },
+        "usage": "A dark band inside the page."
+      },
+      {
+        "name": "color-border",
+        "value": {
+          "light": "#dddad8",
+          "dark": "#413c39"
+        },
+        "usage": "Dividers and card edges."
+      },
+      {
+        "name": "color-border-strong",
+        "value": {
+          "light": "#867f7a",
+          "dark": "#867f7a"
+        },
+        "usage": "Field and outlined-button borders."
+      },
+      {
+        "name": "color-text",
+        "value": {
+          "light": "#1a1816",
+          "dark": "#f7f6f6"
+        },
+        "usage": "Body copy and headings."
+      },
+      {
+        "name": "color-text-muted",
+        "value": {
+          "light": "#69625d",
+          "dark": "#c5c0bc"
+        },
+        "usage": "Captions, hints, metadata."
+      },
+      {
+        "name": "color-text-on-inverse",
+        "value": {
+          "light": "#f7f6f6",
+          "dark": "#1a1816"
+        },
+        "usage": "Text on the dark band."
+      },
+      {
+        "name": "color-text-on-inverse-muted",
+        "value": {
+          "light": "#c5c0bc",
+          "dark": "#544e4a"
+        },
+        "usage": "Secondary text on the dark band."
+      },
+      {
+        "name": "color-link",
+        "value": {
+          "light": "#27566a",
+          "dark": "#a5c7d7"
+        },
+        "usage": "Inline links."
+      },
+      {
+        "name": "color-focus",
+        "value": {
+          "light": "#376b81",
+          "dark": "#78a6bb"
+        },
+        "usage": "The focus ring."
+      },
+      {
+        "name": "color-action",
+        "value": {
+          "light": "#27566a",
+          "dark": "#a5c7d7"
+        },
+        "usage": "Primary buttons."
+      },
+      {
+        "name": "color-action-hover",
+        "value": {
+          "light": "#1c4252",
+          "dark": "#c9dfe9"
+        },
+        "usage": "Primary buttons under the pointer."
+      },
+      {
+        "name": "color-on-action",
+        "value": {
+          "light": "#f7f6f6",
+          "dark": "#1a1816"
+        },
+        "usage": "Text on primary buttons."
+      },
+      {
+        "name": "color-accent",
+        "value": {
+          "light": "#7f3800",
+          "dark": "#f4af89"
+        },
+        "usage": "The accent button and highlights."
+      },
+      {
+        "name": "color-accent-hover",
+        "value": {
+          "light": "#632a00",
+          "dark": "#fdd0b8"
+        },
+        "usage": "The accent under the pointer."
+      },
+      {
+        "name": "color-on-accent",
+        "value": {
+          "light": "#f7f6f6",
+          "dark": "#1a1816"
+        },
+        "usage": "Text on the accent."
+      },
+      {
+        "name": "color-success-surface",
+        "value": {
+          "light": "#f1f9f3",
+          "dark": "#001f0d"
+        },
+        "usage": "Success background."
+      },
+      {
+        "name": "color-success-text",
+        "value": {
+          "light": "#0c4929",
+          "dark": "#c5e4ce"
+        },
+        "usage": "Success text."
+      },
+      {
+        "name": "color-success-border",
+        "value": {
+          "light": "#9ecfad",
+          "dark": "#0c4929"
+        },
+        "usage": "Success edge."
+      },
+      {
+        "name": "color-warning-surface",
+        "value": {
+          "light": "#fef5ec",
+          "dark": "#251400"
+        },
+        "usage": "Warning background."
+      },
+      {
+        "name": "color-warning-text",
+        "value": {
+          "light": "#563500",
+          "dark": "#f2d6b6"
+        },
+        "usage": "Warning text."
+      },
+      {
+        "name": "color-warning-border",
+        "value": {
+          "light": "#e3b886",
+          "dark": "#563500"
+        },
+        "usage": "Warning edge."
+      },
+      {
+        "name": "color-danger-surface",
+        "value": {
+          "light": "#fff4f2",
+          "dark": "#360100"
+        },
+        "usage": "Danger background."
+      },
+      {
+        "name": "color-danger-text",
+        "value": {
+          "light": "#740e07",
+          "dark": "#ffcdc5"
+        },
+        "usage": "Danger text and field errors."
+      },
+      {
+        "name": "color-danger-border",
+        "value": {
+          "light": "#ffa698",
+          "dark": "#94170e"
+        },
+        "usage": "Danger edge and invalid fields."
+      },
+      {
+        "name": "color-info-surface",
+        "value": {
+          "light": "#f3f7ff",
+          "dark": "#001047"
+        },
+        "usage": "Info background."
+      },
+      {
+        "name": "color-info-text",
+        "value": {
+          "light": "#043093",
+          "dark": "#c8dbff"
+        },
+        "usage": "Info text."
+      },
+      {
+        "name": "color-info-border",
+        "value": {
+          "light": "#a0c1ff",
+          "dark": "#043093"
+        },
+        "usage": "Info edge."
+      },
+      {
+        "name": "color-disabled-surface",
+        "value": {
+          "light": "#eeeceb",
+          "dark": "#413c39"
+        },
+        "usage": "A control that cannot be used yet."
+      },
+      {
+        "name": "color-disabled-text",
+        "value": {
+          "light": "#867f7a",
+          "dark": "#a39d98"
+        },
+        "usage": "Text on a disabled control."
+      },
+      {
+        "name": "color-shadow",
+        "value": {
+          "light": "#1a181614",
+          "dark": "#1a181666"
+        },
+        "usage": "Resting shadows: the ink at 8%."
+      },
+      {
+        "name": "color-shadow-strong",
+        "value": {
+          "light": "#1a181624",
+          "dark": "#1a18168c"
+        },
+        "usage": "Raised shadows: the ink at 14%."
+      },
+      {
+        "name": "color-backdrop",
+        "value": {
+          "light": "#1a181680",
+          "dark": "#1a1816b3"
+        },
+        "usage": "Behind an open dialog: the ink at 50%."
+      }
+    ]
+  },
+  "type": {
+    "fonts": [],
+    "families": {
+      "body": "system-ui, -apple-system, \"Segoe UI\", \"Roboto\", sans-serif",
+      "display": "system-ui, -apple-system, \"Segoe UI\", \"Roboto\", sans-serif",
+      "mono": "ui-monospace, \"SFMono-Regular\", \"Menlo\", \"Consolas\", monospace"
+    },
+    "groups": [
+      {
+        "name": "Text",
+        "family": "body",
+        "styles": [
+          {
+            "name": "xs",
+            "fontSize": "0.75rem",
+            "lineHeight": 1.5
+          },
+          {
+            "name": "sm",
+            "fontSize": "0.875rem",
+            "lineHeight": 1.5
+          },
+          {
+            "name": "md",
+            "fontSize": "1rem",
+            "lineHeight": 1.5
+          },
+          {
+            "name": "lg",
+            "fontSize": "1.125rem",
+            "lineHeight": 1.6
+          },
+          {
+            "name": "xl",
+            "fontSize": "1.25rem",
+            "lineHeight": 1.5
+          },
+          {
+            "name": "2xl",
+            "fontSize": "1.5rem",
+            "lineHeight": 1.35
+          },
+          {
+            "name": "3xl",
+            "fontSize": "1.875rem",
+            "lineHeight": 1.25
+          },
+          {
+            "name": "4xl",
+            "fontSize": "2.5rem",
+            "lineHeight": 1.2
+          },
+          {
+            "name": "5xl",
+            "fontSize": "3.5rem",
+            "lineHeight": 1.1
+          },
+          {
+            "name": "6xl",
+            "fontSize": "4.5rem",
+            "lineHeight": 1.05
+          },
+          {
+            "name": "display",
+            "fontSize": "4.5rem",
+            "lineHeight": 1.05
+          },
+          {
+            "name": "h1",
+            "fontSize": "3.5rem",
+            "lineHeight": 1.1
+          },
+          {
+            "name": "h2",
+            "fontSize": "2.5rem",
+            "lineHeight": 1.2
+          },
+          {
+            "name": "h3",
+            "fontSize": "1.875rem",
+            "lineHeight": 1.25
+          },
+          {
+            "name": "h4",
+            "fontSize": "1.5rem",
+            "lineHeight": 1.35
+          },
+          {
+            "name": "body",
+            "fontSize": "1.125rem",
+            "lineHeight": 1.6
+          },
+          {
+            "name": "ui",
+            "fontSize": "1rem",
+            "lineHeight": 1.5
+          },
+          {
+            "name": "small",
+            "fontSize": "0.875rem",
+            "lineHeight": 1.5
+          }
+        ]
+      }
+    ]
+  },
+  "spacing": {
+    "tokens": [
+      {
+        "name": "spacing-2xs",
+        "value": "0.25rem",
+        "usage": "Icon to label."
+      },
+      {
+        "name": "spacing-xs",
+        "value": "0.5rem",
+        "usage": "Inside a control; between a label and its field."
+      },
+      {
+        "name": "spacing-sm",
+        "value": "0.75rem",
+        "usage": "Between related lines."
+      },
+      {
+        "name": "spacing-md",
+        "value": "1rem",
+        "usage": "Page gutter on a phone; between paragraphs."
+      },
+      {
+        "name": "spacing-lg",
+        "value": "1.5rem",
+        "usage": "Card padding."
+      },
+      {
+        "name": "spacing-xl",
+        "value": "2rem",
+        "usage": "Between groups inside a section."
+      },
+      {
+        "name": "spacing-2xl",
+        "value": "3rem",
+        "usage": "Between a section heading and its content on wide screens."
+      },
+      {
+        "name": "spacing-3xl",
+        "value": "4rem",
+        "usage": "Section padding. Never less: generous spacing is the design."
+      },
+      {
+        "name": "spacing-4xl",
+        "value": "6rem",
+        "usage": "Section padding on wide screens."
+      }
+    ]
+  },
+  "radius": {
+    "tokens": [
+      {
+        "name": "radius-xs",
+        "value": "4px",
+        "usage": "Tags, code."
+      },
+      {
+        "name": "radius-sm",
+        "value": "8px",
+        "usage": "Fields, small controls, an image inside a card."
+      },
+      {
+        "name": "radius-md",
+        "value": "12px",
+        "usage": "Alerts, menus."
+      },
+      {
+        "name": "radius-lg",
+        "value": "16px",
+        "usage": "Cards and dialogs."
+      },
+      {
+        "name": "radius-xl",
+        "value": "24px",
+        "usage": "Feature panels."
+      },
+      {
+        "name": "radius-full",
+        "value": "9999px",
+        "usage": "Pills, buttons, avatars."
+      }
+    ]
+  },
+  "shadow": {
+    "tokens": [
+      {
+        "name": "shadow-sm",
+        "value": "0 1px 2px 0 #1a181614, 0 2px 6px -1px #1a181614",
+        "usage": "Cards and buttons at rest. The default."
+      },
+      {
+        "name": "shadow-md",
+        "value": "0 4px 8px -2px #1a181614, 0 10px 16px -4px #1a181624",
+        "usage": "A button under the pointer; menus."
+      },
+      {
+        "name": "shadow-lg",
+        "value": "0 8px 12px -4px #1a181614, 0 20px 32px -8px #1a181624",
+        "usage": "A card under the pointer, and dialogs. The top of the scale."
+      }
+    ]
+  }
+}

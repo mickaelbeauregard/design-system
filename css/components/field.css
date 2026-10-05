@@ -1,0 +1,142 @@
+/*
+ * Form fields.
+ *
+ * <div class="ds-field">
+ *   <label class="ds-label" for="email">Courriel</label>
+ *   <p class="ds-hint" id="email-hint">On ne le partage pas.</p>
+ *   <input class="ds-input" id="email" aria-describedby="email-hint email-error" aria-invalid="true">
+ *   <p class="ds-error" id="email-error">Il manque le @.</p>
+ * </div>
+ *
+ * .ds-input styles <input>, <select> and <textarea>. Invalid is
+ * aria-invalid="true", set by the script that validated it, so the state and
+ * what a screen reader announces cannot disagree.
+ *
+ * <label class="ds-check"><input type="checkbox"> Recevoir les nouvelles</label>
+ * <label class="ds-check"><input type="checkbox" role="switch" class="ds-switch"> Avis</label>
+ */
+@layer components {
+  .ds-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .ds-label {
+    color: var(--ground-text);
+    font-size: var(--text-ui);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .ds-hint {
+    color: var(--ground-text-muted);
+    font-size: var(--text-small);
+  }
+
+  .ds-error {
+    color: var(--color-danger-text);
+    font-size: var(--text-small);
+    font-weight: var(--font-weight-medium);
+  }
+
+  /* 1rem text at the least: iOS zooms the page into any field set smaller. */
+  .ds-input {
+    inline-size: 100%;
+    min-block-size: 2.75rem;
+    padding-block: var(--spacing-xs);
+    padding-inline: var(--spacing-sm);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: var(--text-ui);
+    transition: border-color var(--duration-fast) var(--ease-standard);
+  }
+
+  .ds-input::placeholder {
+    color: var(--color-text-muted);
+    opacity: 1;
+  }
+
+  .ds-input:hover {
+    border-color: var(--color-text-muted);
+  }
+
+  /* The error text colour, not danger-border: the edge is how the field shows
+     its state, so it needs the 3:1 a decorative border does not. */
+  .ds-input[aria-invalid="true"] {
+    border-color: var(--color-danger-text);
+  }
+
+  .ds-input:disabled {
+    background: var(--color-disabled-surface);
+    color: var(--color-disabled-text);
+    cursor: not-allowed;
+  }
+
+  textarea.ds-input {
+    min-block-size: 6rem;
+    resize: vertical;
+  }
+
+  .ds-check {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    min-block-size: 2.75rem;
+    color: var(--ground-text);
+    font-size: var(--text-ui);
+    cursor: pointer;
+  }
+
+  .ds-check input:not(.ds-switch) {
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+    accent-color: var(--color-action);
+  }
+
+  .ds-switch {
+    --switch-track: var(--color-border-strong);
+
+    position: relative;
+    flex: none;
+    inline-size: 2.75rem;
+    block-size: 1.5rem;
+    border-radius: var(--radius-full);
+    background: var(--switch-track);
+    cursor: pointer;
+    appearance: none;
+    transition: background-color var(--duration-fast) var(--ease-standard);
+  }
+
+  .ds-switch::before {
+    content: "";
+    position: absolute;
+    inset-block-start: 0.1875rem;
+    inset-inline-start: 0.1875rem;
+    inline-size: 1.125rem;
+    block-size: 1.125rem;
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    transition: translate var(--duration-base) var(--ease-standard);
+  }
+
+  .ds-switch:checked {
+    --switch-track: var(--color-action);
+  }
+
+  .ds-switch:checked::before {
+    translate: 1.25rem 0;
+  }
+
+  .ds-switch:dir(rtl):checked::before {
+    translate: -1.25rem 0;
+  }
+
+  .ds-switch:disabled {
+    --switch-track: var(--color-disabled-surface);
+
+    cursor: not-allowed;
+  }
+}

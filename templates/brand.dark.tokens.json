@@ -1,0 +1,53 @@
+{
+  "$description": "The dark theme: role overrides only. The palette stays the same; what each role points at changes. Add it under \"themes\": { \"dark\": [...] } in ds.config.json.",
+  "color": {
+    "$type": "color",
+    "bg": { "$value": "{color.neutral-950}", "$description": "Page background." },
+    "surface": { "$value": "{color.neutral-900}", "$description": "Cards, dialogs, fields." },
+    "surface-muted": { "$value": "{color.neutral-800}", "$description": "Secondary fills." },
+    "surface-inverse": { "$value": "{color.neutral-100}", "$description": "A light band inside the dark page." },
+    "border": { "$value": "{color.neutral-800}", "$description": "Dividers and card edges." },
+    "border-strong": { "$value": "{color.neutral-500}", "$description": "Field and outlined-button borders." },
+    "text": { "$value": "{color.neutral-50}", "$description": "Body copy and headings." },
+    "text-muted": { "$value": "{color.neutral-300}", "$description": "Captions, hints, metadata." },
+    "text-on-inverse": { "$value": "{color.neutral-950}", "$description": "Text on the light band." },
+    "text-on-inverse-muted": { "$value": "{color.neutral-700}", "$description": "Secondary text on the light band." },
+    "link": { "$value": "{color.brand-300}", "$description": "Inline links." },
+    "focus": { "$value": "{color.brand-400}", "$description": "The focus ring." },
+    "action": { "$value": "{color.brand-300}", "$description": "Primary buttons." },
+    "action-hover": { "$value": "{color.brand-200}", "$description": "Primary buttons under the pointer." },
+    "on-action": { "$value": "{color.neutral-950}", "$description": "Text on primary buttons." },
+    "accent": { "$value": "{color.ember-300}", "$description": "The accent button and highlights." },
+    "accent-hover": { "$value": "{color.ember-200}", "$description": "The accent under the pointer." },
+    "on-accent": { "$value": "{color.neutral-950}", "$description": "Text on the accent." },
+    "success-surface": { "$value": "{color.green-950}", "$description": "Success background." },
+    "success-text": { "$value": "{color.green-200}", "$description": "Success text." },
+    "success-border": { "$value": "{color.green-800}", "$description": "Success edge." },
+    "warning-surface": { "$value": "{color.amber-950}", "$description": "Warning background." },
+    "warning-text": { "$value": "{color.amber-200}", "$description": "Warning text." },
+    "warning-border": { "$value": "{color.amber-800}", "$description": "Warning edge." },
+    "danger-surface": { "$value": "{color.red-950}", "$description": "Danger background." },
+    "danger-text": { "$value": "{color.red-200}", "$description": "Danger text and field errors." },
+    "danger-border": { "$value": "{color.red-700}", "$description": "Danger edge and invalid fields." },
+    "info-surface": { "$value": "{color.blue-950}", "$description": "Info background." },
+    "info-text": { "$value": "{color.blue-200}", "$description": "Info text." },
+    "info-border": { "$value": "{color.blue-800}", "$description": "Info edge." },
+    "disabled-surface": { "$value": "{color.neutral-800}", "$description": "A control that cannot be used yet." },
+    "disabled-text": { "$value": "{color.neutral-400}", "$description": "Text on a disabled control." },
+    "shadow": {
+      "$value": "{color.neutral-950}",
+      "$description": "Resting shadows: the ink at 40%, since a dark page swallows a light one.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "alpha": 0.4 } }
+    },
+    "shadow-strong": {
+      "$value": "{color.neutral-950}",
+      "$description": "Raised shadows: the ink at 55%.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "alpha": 0.55 } }
+    },
+    "backdrop": {
+      "$value": "{color.neutral-950}",
+      "$description": "Behind an open dialog: the ink at 70%.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "alpha": 0.7 } }
+    }
+  }
+}

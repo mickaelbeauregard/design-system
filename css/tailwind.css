@@ -1,0 +1,13 @@
+/*
+ * For a Tailwind v4 project: everything but the reset, since Tailwind's
+ * preflight is one. The layer names are Tailwind's own, so its utilities
+ * still override any component.
+ *
+ *   @import "tailwindcss";
+ *   @import "../design/tokens.tailwind.css";
+ *   @import "@mickaelbeauregard/design-system/css/tailwind.css";
+ */
+@import "./base.css";
+@import "./layout.css";
+@import "./components.css";
+@import "./utilities.css";

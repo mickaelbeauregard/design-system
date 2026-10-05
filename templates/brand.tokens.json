@@ -1,0 +1,102 @@
+{
+  "$description": "A project's brand: its palette, what each colour role points at, and its typefaces. Replace the seeds with the brand's own colours, keep the role names, and run `ds check` — DS-0109 measures every pairing.",
+  "color": {
+    "$type": "color",
+    "neutral": {
+      "$value": "#78716c",
+      "$description": "Seed of the neutral scale: greys with a little warmth.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "scale": true } }
+    },
+    "brand": {
+      "$value": "#2b5f75",
+      "$description": "Seed of the brand scale. Replace with the brand's main colour.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "scale": true } }
+    },
+    "ember": {
+      "$value": "#b4540a",
+      "$description": "Seed of the accent scale: a second emphasis, used sparingly.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "scale": true } }
+    },
+    "green": {
+      "$value": "#2f7d4f",
+      "$description": "Seed of the success scale.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "scale": true } }
+    },
+    "amber": {
+      "$value": "#b7791f",
+      "$description": "Seed of the warning scale.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "scale": true } }
+    },
+    "red": {
+      "$value": "#c0392b",
+      "$description": "Seed of the danger scale.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "scale": true } }
+    },
+    "blue": {
+      "$value": "#2563eb",
+      "$description": "Seed of the info scale.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "scale": true } }
+    },
+    "white": { "$value": "#ffffff", "$description": "Pure white, for the raised surface only." },
+
+    "bg": { "$value": "{color.neutral-50}", "$description": "Page background." },
+    "surface": { "$value": "{color.white}", "$description": "Cards, dialogs, fields." },
+    "surface-muted": { "$value": "{color.neutral-100}", "$description": "Secondary fills: tonal buttons, tags, sunken panels." },
+    "surface-inverse": { "$value": "{color.neutral-900}", "$description": "A dark band inside the page." },
+    "border": { "$value": "{color.neutral-200}", "$description": "Dividers and card edges." },
+    "border-strong": { "$value": "{color.neutral-500}", "$description": "Field and outlined-button borders." },
+    "text": { "$value": "{color.neutral-950}", "$description": "Body copy and headings." },
+    "text-muted": { "$value": "{color.neutral-600}", "$description": "Captions, hints, metadata." },
+    "text-on-inverse": { "$value": "{color.neutral-50}", "$description": "Text on the dark band." },
+    "text-on-inverse-muted": { "$value": "{color.neutral-300}", "$description": "Secondary text on the dark band." },
+    "link": { "$value": "{color.brand-700}", "$description": "Inline links." },
+    "focus": { "$value": "{color.brand-600}", "$description": "The focus ring." },
+    "action": { "$value": "{color.brand-700}", "$description": "Primary buttons." },
+    "action-hover": { "$value": "{color.brand-800}", "$description": "Primary buttons under the pointer." },
+    "on-action": { "$value": "{color.neutral-50}", "$description": "Text on primary buttons." },
+    "accent": { "$value": "{color.ember-700}", "$description": "The accent button and highlights." },
+    "accent-hover": { "$value": "{color.ember-800}", "$description": "The accent under the pointer." },
+    "on-accent": { "$value": "{color.neutral-50}", "$description": "Text on the accent." },
+    "success-surface": { "$value": "{color.green-50}", "$description": "Success background." },
+    "success-text": { "$value": "{color.green-800}", "$description": "Success text." },
+    "success-border": { "$value": "{color.green-300}", "$description": "Success edge." },
+    "warning-surface": { "$value": "{color.amber-50}", "$description": "Warning background." },
+    "warning-text": { "$value": "{color.amber-800}", "$description": "Warning text." },
+    "warning-border": { "$value": "{color.amber-300}", "$description": "Warning edge." },
+    "danger-surface": { "$value": "{color.red-50}", "$description": "Danger background." },
+    "danger-text": { "$value": "{color.red-800}", "$description": "Danger text and field errors." },
+    "danger-border": { "$value": "{color.red-300}", "$description": "Danger edge and invalid fields." },
+    "info-surface": { "$value": "{color.blue-50}", "$description": "Info background." },
+    "info-text": { "$value": "{color.blue-800}", "$description": "Info text." },
+    "info-border": { "$value": "{color.blue-300}", "$description": "Info edge." },
+    "disabled-surface": { "$value": "{color.neutral-100}", "$description": "A control that cannot be used yet." },
+    "disabled-text": { "$value": "{color.neutral-500}", "$description": "Text on a disabled control." },
+    "shadow": {
+      "$value": "{color.neutral-950}",
+      "$description": "Resting shadows: the ink at 8%.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "alpha": 0.08 } }
+    },
+    "shadow-strong": {
+      "$value": "{color.neutral-950}",
+      "$description": "Raised shadows: the ink at 14%.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "alpha": 0.14 } }
+    },
+    "backdrop": {
+      "$value": "{color.neutral-950}",
+      "$description": "Behind an open dialog: the ink at 50%.",
+      "$extensions": { "io.github.mickaelbeauregard.ds": { "alpha": 0.5 } }
+    }
+  },
+  "font": {
+    "$type": "fontFamily",
+    "body": {
+      "$value": ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+      "$description": "Running text and controls. The system face: zero requests, instant render."
+    },
+    "display": { "$value": "{font.body}", "$description": "Headings. Point at a display face when the brand has one." },
+    "mono": {
+      "$value": ["ui-monospace", "SFMono-Regular", "Menlo", "Consolas", "monospace"],
+      "$description": "Code and tabular figures."
+    }
+  }
+}

@@ -1,0 +1,98 @@
+/*
+ * Elements, before any class.
+ *
+ * Text, link and focus colours are read through the --ground-* variables, not
+ * the roles directly. A ground (layout.css) re-points them, and every surface
+ * component points them back. That is the whole defence against a light card
+ * inside a dark band inheriting the band's light text — cream on cream.
+ */
+@layer base {
+  :root {
+    --ground-text: var(--color-text);
+    --ground-text-muted: var(--color-text-muted);
+    --ground-link: var(--color-link);
+    --ground-focus: var(--color-focus);
+    --ground-border-strong: var(--color-border-strong);
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--ground-text);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-bold);
+  }
+
+  h1 {
+    font-size: var(--text-h1);
+    line-height: var(--text-h1--line-height);
+  }
+
+  h2 {
+    font-size: var(--text-h2);
+    line-height: var(--text-h2--line-height);
+  }
+
+  h3 {
+    font-size: var(--text-h3);
+    line-height: var(--text-h3--line-height);
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: var(--text-h4);
+    line-height: var(--text-h4--line-height);
+  }
+
+  small {
+    font-size: var(--text-small);
+  }
+
+  /* An inline link is underlined: colour alone is not enough to find it
+     (WCAG 1.4.1). */
+  a {
+    color: var(--ground-link);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  /* The one focus ring. :focus-visible keeps it off mouse clicks; DS-0104
+     fails the build on anything that removes it. */
+  :focus-visible {
+    outline: 2px solid var(--ground-focus);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-action);
+    color: var(--color-on-action);
+  }
+
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--font-mono);
+    font-size: var(--text-small);
+  }
+
+  hr {
+    border: 0;
+    border-block-start: 1px solid var(--color-border);
+  }
+}
