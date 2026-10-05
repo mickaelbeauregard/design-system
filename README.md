@@ -18,27 +18,16 @@ ramp, the grounds, the components. Every rule's reason is in
 
 ## Install
 
-The package is private, on GitHub Packages. Once per machine, give npm a
-token that can read packages:
+Public, installed straight from this repository at a version tag — no
+registry, no token, locally or on any build host:
 
 ```bash
-gh auth refresh -s read:packages
+npm install -D "git+https://github.com/mickaelbeauregard/design-system.git#semver:^0.2.0"
 ```
 
-Then in each project, an `.npmrc` beside `package.json`:
-
-```
-@mickaelbeauregard:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
-```
-
-```bash
-NODE_AUTH_TOKEN=$(gh auth token) npm install -D @mickaelbeauregard/design-system
-```
-
-A host that builds the site (Netlify, Vercel) needs the same variable:
-`NODE_AUTH_TOKEN`, set to a classic personal access token with only
-`read:packages`. Without it the install fails before the build starts.
+Write the `git+https://` form, not the `github:` shorthand: the shorthand asks
+git over SSH, which a build host has no key for. The lockfile pins the exact
+commit, and a clean install fetches it over HTTPS.
 
 ## Set up a project
 
@@ -93,7 +82,8 @@ uses: overriding a component never needs `!important` or a longer selector.
 ## Updating a project
 
 ```bash
-npm install -D @mickaelbeauregard/design-system@latest && npx ds build && npx ds check
+npm install -D "git+https://github.com/mickaelbeauregard/design-system.git#semver:^0.3.0"
+npx ds build && npx ds check
 ```
 
 [CHANGELOG.md](CHANGELOG.md) says what each version changes. A major version
@@ -109,5 +99,6 @@ npm run build            # rebuild the catalogue from the default brand
 npm run test:visual      # screenshot comparison of the catalogue, both widths, both themes
 ```
 
-Release: bump `version` in `package.json`, add the CHANGELOG entry, then tag
-`vX.Y.Z` and push the tag. `.github/workflows/publish.yml` tests and publishes.
+Release: bump `version` in `package.json`, add the CHANGELOG entry, commit,
+then tag `vX.Y.Z` and push the tag. The tag is the release: projects resolve
+`#semver:^X.Y.0` against the tags.

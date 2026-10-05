@@ -30,6 +30,7 @@ from here.
    attribute is a major version; adding one is a minor. Every release gets a
    `CHANGELOG.md` entry that says what a project has to do.
 7. **No auto-commit.** The user reviews before anything is committed or tagged.
+   A pushed tag is a release (ADR-0005): projects resolve `#semver:` against it.
 
 ## Traps
 

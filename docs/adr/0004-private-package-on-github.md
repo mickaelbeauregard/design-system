@@ -1,6 +1,6 @@
 # ADR-0004 — A private, versioned package on GitHub Packages
 
-**Date**: 2026-10-05 · **Status**: accepted
+**Date**: 2026-10-05 · **Status**: superseded by ADR-0005
 
 ## Context
 
