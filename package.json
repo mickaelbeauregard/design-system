@@ -1,6 +1,6 @@
 {
   "name": "@mickaelbeauregard/design-system",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A brand-neutral design system: W3C tokens, layered CSS components, and the checks that keep a project on them.",
   "type": "module",
   "license": "UNLICENSED",

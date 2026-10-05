@@ -75,6 +75,16 @@ test('a fluid size is its phone value at 360px and its max at 1280px', () => {
   assert.ok(Math.abs(at(FLUID_RANGE[1]) - max * 16) < 0.01);
 });
 
+test('a fluid range reproduces a size written as clamp(min, Nvw, max)', () => {
+  /* clamp(2.5rem, 5vw, 4rem) is linear from 800px (5vw = 40px) to 1280px. */
+  const { tokens, resolved } = run({
+    text: { $type: 'dimension', h: { $value: { value: 2.5, unit: 'rem' }, $extensions: { [NS]: { fluid: { max: { value: 4, unit: 'rem' }, range: [800, 1280] } } } } },
+  });
+  assert.equal(cssValue(tokens.get('text.h'), resolved.get('text.h')), 'clamp(2.5rem, 0rem + 5vw, 4rem)');
+  const bad = run({ text: { $type: 'dimension', h: { $value: { value: 1, unit: 'rem' }, $extensions: { [NS]: { fluid: { max: { value: 2, unit: 'rem' }, range: [900, 400] } } } } } });
+  assert.ok(bad.errors.some((e) => e.includes('fluid.range')));
+});
+
 test('a later file overrides one token without restating its group', () => {
   const dir = project();
   const config = loadConfig(dir);

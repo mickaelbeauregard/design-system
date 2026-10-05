@@ -66,8 +66,8 @@ const dimension = (d) => (d.value === 0 ? '0' : `${num(d.value)}${d.unit}`);
 
 /** clamp() with a rem term in the middle: pure vw ignores browser zoom, so text
  *  sized that way fails WCAG 1.4.4 at the widths where it is fluid. */
-function fluid(min, max) {
-  const [vMin, vMax] = FLUID_RANGE;
+function fluid(min, max, range = FLUID_RANGE) {
+  const [vMin, vMax] = range;
   const slope = (px(max) - px(min)) / (vMax - vMin);
   const intercept = px(min) - slope * vMin;
   return `clamp(${dimension(min)}, ${num(intercept / 16)}rem + ${num(slope * 100)}vw, ${dimension(max)})`;
@@ -92,7 +92,7 @@ export function cssValue(token, entry) {
     case 'color':
       return value.css;
     case 'dimension':
-      return value.fluidMax ? fluid(value, value.fluidMax) : dimension(value);
+      return value.fluidMax ? fluid(value, value.fluidMax, value.fluidRange) : dimension(value);
     case 'duration':
       return `${value.value}${value.unit}`;
     case 'number':

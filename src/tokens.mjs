@@ -11,8 +11,10 @@
  * Two extensions, under NS, cover what the format cannot say (ADR-0001):
  *   alpha  on a colour alias: the aliased colour at that opacity. Emitted as
  *          color-mix() so a tint follows its source instead of freezing a copy.
- *   fluid  on a dimension: { max } — $value is the phone size, max the wide one,
- *          emitted as a zoom-safe clamp(). lineHeight on a text size pairs it.
+ *   fluid  on a dimension: { max, range? } — $value is the phone size, max the
+ *          wide one, emitted as clamp(). It grows across range, [px, px],
+ *          360–1280 unless a brand keeps a size it already had.
+ *          lineHeight on a text size pairs it.
  *   scale  on a colour: generate an eleven-step OKLCH tone scale from it.
  */
 import { readFileSync } from 'node:fs';
@@ -212,7 +214,11 @@ export function resolve(tokens) {
     if (token.type === 'dimension' && token.ext.fluid) {
       const max = parseUnitValue(token.ext.fluid.max, 'dimension');
       if (!max) throw new TokenError(`${path}: fluid.max must be a dimension like {"value": 2, "unit": "rem"}`);
-      value = { ...value, fluidMax: max };
+      const range = token.ext.fluid.range;
+      if (range !== undefined && !(Array.isArray(range) && range.length === 2 && range[0] < range[1] && range.every((n) => typeof n === 'number'))) {
+        throw new TokenError(`${path}: fluid.range must be [narrowest px, widest px]`);
+      }
+      value = { ...value, fluidMax: max, fluidRange: range };
     }
     resolved.set(path, { value, alias: target });
     return value;
